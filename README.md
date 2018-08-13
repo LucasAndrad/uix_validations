@@ -1,8 +1,8 @@
 # UixValidations
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/uix_validations`. To experiment with that code, run `bin/console` for an interactive prompt.
+`uix_validations` is a gem that provides Js functions for real time validations.
 
-TODO: Delete this and the text above, and describe your gem
+Uix is the abbreviation that I "created" for UI and UX, since this gem has some thigs from both worlds
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Write usage instructions here (I will)
 
 ## Development
 
@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/uix_validations.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lucasandrad/uix_validations.
 
 ## License
 
