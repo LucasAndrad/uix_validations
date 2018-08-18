@@ -24,10 +24,10 @@ Or install it yourself as:
 
 TODO: Write usage instructions here (I will)
 
-## Good practicies about real time validations
+## Good practices about real time validations
 This gem is inspired in [Luke Wroblewski study, (article here)](https://alistapart.com/article/inline-validation-in-web-forms) about validation in web forms. This article was published in 2009 but it's still a excellent reference about form validations. Many writers use Luke study as reference in other articles [Example here](https://designmodo.com/ux-form-validation/)
 
-**This gem follow this practicies:**
+**This gem follow this practices:**
  - Show the validation at the right time (right after the user has submitted the input value)
  - Show the validation at the right place (under the input)
  - Correct colors (not to red and not to green)

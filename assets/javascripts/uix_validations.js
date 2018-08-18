@@ -1,7 +1,19 @@
 // Regex list
-var numberPattern = /^\d/;
+var numberPattern = /^[0-9]*$/;
+var characterPattern = /^\w/;
 
 // Generic functions
+function validate(fieldId, validId, regex) {
+  var field = document.querySelector(fieldId);
+  field.addEventListener("click", () => {
+    var valid = document.querySelector(validId);
+    valid.style.display = 'inherit';
+    valid.style.background = '#ffffff';
+    checkInput(field, valid, regex)
+    checkInputOut(field, valid, regex);
+  });
+}
+
 function checkInputOut(field, valid, regex) {
   field.addEventListener("focusout", () => {
     if(regex.test(field.value)) {
@@ -20,17 +32,5 @@ function checkInput(field, valid, regex) {
     else {
       valid.style.background = '#ffffff';
     }
-  });
-}
-
-// Specific functions
-function validateNumber(fieldId, valiId) {
-  var field = document.querySelector(fieldId);
-  field.addEventListener("click", () => {
-    var valid = document.querySelector(valiId);
-    valid.style.display = 'inherit';
-    valid.style.background = '#ffffff';
-    checkInput(field, valid, numberPattern)
-    checkInputOut(field, valid, numberPattern);
   });
 }
