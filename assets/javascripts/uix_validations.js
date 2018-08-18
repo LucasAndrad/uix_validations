@@ -34,3 +34,8 @@ function checkInput(field, valid, regex) {
     }
   });
 }
+
+// Specific functions
+function validateNumber(fieldId, validId) {
+  validate(fieldId, validId, numberPattern);
+}
