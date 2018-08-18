@@ -1,6 +1,7 @@
 // Regex list
 var numberPattern = /^[0-9]*$/;
 var characterPattern = /^[a-zA-Z]*$/;
+var nonDigitPattern = /^[^0-9]*$/;
 
 // Generic functions
 function validate(fieldId, validId, regex) {
@@ -40,6 +41,10 @@ function validateNumber(fieldId, validId) {
   validate(fieldId, validId, numberPattern);
 }
 
-function validateNumber(fieldId, validId) {
+function validateCharacter(fieldId, validId) {
   validate(fieldId, validId, characterPattern);
+}
+
+function validateNonDigit(fieldId, validId) {
+  validate(fieldId, validId, nonDigitPattern);
 }
