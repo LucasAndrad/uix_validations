@@ -1,6 +1,6 @@
 // Regex list
 var numberPattern = /^[0-9]*$/;
-var characterPattern = /^\w/;
+var characterPattern = /^[a-zA-Z]*$/;
 
 // Generic functions
 function validate(fieldId, validId, regex) {
@@ -38,4 +38,8 @@ function checkInput(field, valid, regex) {
 // Specific functions
 function validateNumber(fieldId, validId) {
   validate(fieldId, validId, numberPattern);
+}
+
+function validateNumber(fieldId, validId) {
+  validate(fieldId, validId, characterPattern);
 }

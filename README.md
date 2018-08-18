@@ -30,7 +30,7 @@ This gem is inspired in [Luke Wroblewski study, (article here)](https://alistapa
 **This gem follow this practices:**
  - Show the validation at the right time (right after the user has submitted the input value)
  - Show the validation at the right place (under the input)
- - Correct colors (not to red and not to green)
+ - Correct colors (not too red and not too green)
  - The colors change at the right moment (while the user types validations don't turn red, only if he click outside the input, but if the input value is valid the validations turn green, because is good to know that the value is correct just in time)
  - Validations don't have a alarming design (I am not a design but I tried to make then clean and understandable, something like the ideas of minimalist design)
 
