@@ -2,7 +2,7 @@
 
 `uix_validations` is a gem that provides Js functions for real time validations.
 
-Uix is the abbreviation that I "created" for UI and UX, since this gem has some thigs from both worlds
+Uix is the abbreviation that I "created" for UI and UX, since this gem has some things from both worlds
 
 ## Installation
 
@@ -24,11 +24,15 @@ Or install it yourself as:
 
 TODO: Write usage instructions here (I will)
 
-## Development
+## Write good messages
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Good messages can be a differential in your forms. Don't scare your users with alarming messages, like:<br>**Error: this is wrong. Use just numbers**<br>
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Instead you need to focus in what is wrong and help the user to fix it. Something like:<br>
+**Should have onlye numbers. Ex: 99887766**
+
+You can read more about it here: [UX Movement, post about good messages](http://uxmovement.com/forms/how-to-make-your-form-error-messages-more-reassuring/)
+
 
 ## Contributing
 
