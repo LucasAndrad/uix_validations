@@ -40,7 +40,7 @@ function validateNumber(fieldId, validId) {
   validate(fieldId, validId, numberPattern);
 }
 function validateNumberRange(fieldId, validId, range=[0,10]) {
-  var numberRangePattern = new RegExp(`^\\d{`+a[0]+`,`+a[1]+`}$`);
+  var numberRangePattern = new RegExp(`^\\d{`+range[0]+`,`+range[1]+`}$`);
   validate(fieldId, validId, numberRangePattern);
 }
 function validateCharacter(fieldId, validId) {
