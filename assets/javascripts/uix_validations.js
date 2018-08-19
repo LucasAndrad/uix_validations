@@ -3,6 +3,9 @@ var numberPattern = /^[0-9]*$/;
 var characterPattern = /^[a-zA-Z]*$/;
 var nonDigitPattern = /^[^0-9]*$/;
 
+// From https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+var emailPattern = /\S+@\S+\.\S+/;
+
 // Generic functions
 function validate(fieldId, validId, regex) {
   var field = document.querySelector(fieldId);
@@ -59,4 +62,8 @@ function validateNonDigit(fieldId, validId) {
 function validateNonDigitRange(fieldId, validId, range=[0,10]) {
   var nonDigitRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
   validate(fieldId, validId, nonDigitRangePattern);
+}
+// Email
+function validateEmail(fieldId, validId) {
+  validate(fieldId, validId, emailPattern);
 }
