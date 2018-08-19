@@ -47,13 +47,13 @@ function validateCharacter(fieldId, validId) {
   validate(fieldId, validId, characterPattern);
 }
 function validateCharacterRange(fieldId, validId, range=[0,10]) {
-  var numberRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
-  validate(fieldId, validId, numberRangePattern);
+  var characterRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
+  validate(fieldId, validId, characterRangePattern);
 }
 function validateNonDigit(fieldId, validId) {
   validate(fieldId, validId, nonDigitPattern);
 }
 function validateNonDigitRange(fieldId, validId, range=[0,10]) {
-  var numberRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
-  validate(fieldId, validId, nonDigitPattern);
+  var nonDigitRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
+  validate(fieldId, validId, nonDigitRangePattern);
 }
