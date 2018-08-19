@@ -53,3 +53,7 @@ function validateCharacterRange(fieldId, validId, range=[0,10]) {
 function validateNonDigit(fieldId, validId) {
   validate(fieldId, validId, nonDigitPattern);
 }
+function validateNonDigitRange(fieldId, validId, range=[0,10]) {
+  var numberRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
+  validate(fieldId, validId, nonDigitPattern);
+}
