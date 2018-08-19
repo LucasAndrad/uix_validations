@@ -46,6 +46,10 @@ function validateNumberRange(fieldId, validId, range=[0,10]) {
 function validateCharacter(fieldId, validId) {
   validate(fieldId, validId, characterPattern);
 }
+function validateCharacterRange(fieldId, validId, range=[0,10]) {
+  var numberRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
+  validate(fieldId, validId, numberRangePattern);
+}
 function validateNonDigit(fieldId, validId) {
   validate(fieldId, validId, nonDigitPattern);
 }
