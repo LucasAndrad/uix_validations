@@ -7,7 +7,7 @@ var nonDigitPattern = /^[^0-9]*$/;
 var emailPattern = /\S+@\S+\.\S+/;
 
 // Generic functions
-function validate(fieldId, validId, regex) {
+function validatePattern(fieldId, validId, regex) {
   var field = document.querySelector(fieldId);
   field.addEventListener("click", () => {
     var valid = document.querySelector(validId);
@@ -41,29 +41,29 @@ function checkInputValue(field, valid, regex) {
 // Specific functions
 // Number
 function validateNumber(fieldId, validId) {
-  validate(fieldId, validId, numberPattern);
+  validatePattern(fieldId, validId, numberPattern);
 }
 function validateNumberRange(fieldId, validId, range=[0,10]) {
   var numberRangePattern = new RegExp(`^\\d{`+range[0]+`,`+range[1]+`}$`);
-  validate(fieldId, validId, numberRangePattern);
+  validatePattern(fieldId, validId, numberRangePattern);
 }
 // Character
 function validateCharacter(fieldId, validId) {
-  validate(fieldId, validId, characterPattern);
+  validatePattern(fieldId, validId, characterPattern);
 }
 function validateCharacterRange(fieldId, validId, range=[0,10]) {
   var characterRangePattern = new RegExp(`^\[a-zA-Z]{`+range[0]+`,`+range[1]+`}$`);
-  validate(fieldId, validId, characterRangePattern);
+  validatePattern(fieldId, validId, characterRangePattern);
 }
 // Non digit
 function validateNonDigit(fieldId, validId) {
-  validate(fieldId, validId, nonDigitPattern);
+  validatePattern(fieldId, validId, nonDigitPattern);
 }
 function validateNonDigitRange(fieldId, validId, range=[0,10]) {
   var nonDigitRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
-  validate(fieldId, validId, nonDigitRangePattern);
+  validatePattern(fieldId, validId, nonDigitRangePattern);
 }
 // Email
 function validateEmail(fieldId, validId) {
-  validate(fieldId, validId, emailPattern);
+  validatePattern(fieldId, validId, emailPattern);
 }
