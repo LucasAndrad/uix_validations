@@ -67,3 +67,8 @@ function validateNonDigitRange(fieldId, validId, range=[0,10]) {
 function validateEmail(fieldId, validId) {
   validatePattern(fieldId, validId, emailPattern);
 }
+// Range
+function validateJustRange(fieldId, validId, range=[0,10]) {
+  var rangePattern = new RegExp(`^\\S{`+range[0]+`,`+range[1]+`}$`);
+  validatePattern(fieldId, validId, rangePattern);
+}
