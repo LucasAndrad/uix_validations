@@ -6,13 +6,22 @@ var nonDigitPattern = /^[^0-9]*$/;
 // From https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 var emailPattern = /\S+@\S+\.\S+/;
 
+
+// Flow
+// onClick -> set default
+// checkinputValue-> 
+//   if (enquanto digita se for valid) { SET VALID  }
+//   else { SET default }
+// checkinputout->
+//   if (onFocusOut for valid) { SET VALID  }
+//   else { SET INVALID }
+
 // Generic functions
 function validatePattern(fieldId, validId, regex) {
   var field = document.querySelector(fieldId);
   field.addEventListener("click", () => {
     var valid = document.querySelector(validId);
-    valid.style.display = 'inherit';
-    valid.style.background = '#ffffff';
+    setDefaultClass(valid);
     checkInputValue(field, valid, regex)
     checkInputOut(field, valid, regex);
   });
@@ -43,6 +52,8 @@ function setClasses(element, classOut, classIn) {
 } 
 function setDefaultClass(element) {
   element.className = 'uix-validation';
+  element.style.display = 'inherit';
+  element.style.background = '#ffffff';
 }
 // Can be usefull latter
 //var classList = this.className.split(' ');
