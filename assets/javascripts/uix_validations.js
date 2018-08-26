@@ -37,6 +37,29 @@ function checkInputValue(field, valid, regex) {
     }
   });
 }
+function setClasses(element, classOut, classIn) {
+  element.classList.remove(classOut);
+  element.classList.add(classIn);
+} 
+function setDefaultClass(element) {
+  element.className = 'uix-validation';
+}
+// Can be usefull latter
+//var classList = this.className.split(' ');
+//  this.className = '';
+
+// function setClass(classOut, classIn) {
+//   var element = document.getElementById("test");
+//   element.addEventListener("click", () => {
+//      if(element.classList.contains("invalid")) {
+//        element.classList.remove("invalid");
+//        element.classList.add("valid");
+//      } else {
+//        element.classList.remove("valid");
+//        element.classList.add("invalid");
+//      }
+//   });
+// } 
 
 // Specific functions
 // Number
