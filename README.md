@@ -20,9 +20,24 @@ Or install it yourself as:
 
     $ gem install uix_validations
 
+Than in your Rails project add this at `app/assets/javascripts/application.js`
+
+```
+//= require uix_validations
+```
+
+And this at `app/assets/stylesheets/application.scss`
+
+```
+@import "uix_validations";
+```
+
+If you are using `application.css` insted of `application.scss`, you can import uix_validations into any `.scss` file.
+
 ## Usage
 
-TODO: Write usage instructions here (I will)
+### Live demo
+Check out this live demo using Uix Validations: [uix_validations_demo link here](https://uix-validations-demo.herokuapp.com/)
 
 ## Good practices about real time validations
 This gem is inspired in [Luke Wroblewski study, (article here)](https://alistapart.com/article/inline-validation-in-web-forms) about validation in web forms. This article was published in 2009 but it's still a excellent reference about form validations. Many writers use Luke study as reference in other articles [Example here](https://designmodo.com/ux-form-validation/)
