@@ -29,33 +29,21 @@ function validatePattern(fieldId, validId, regex) {
 function checkInputOut(field, valid, regex) {
   field.addEventListener("focusout", () => {
     switchClasses(field, valid, regex);
-    // if(regex.test(field.value)) {
-    //   valid.style.background = '#5bff5e'
-    // }
-    // else {
-    //   valid.style.background = '#ff8484';
-    // }
+    // find way to get class type
   });
 }
 function checkInputValue(field, valid, regex) {
   field.addEventListener("keyup", () => {
     switchClasses(field, valid, regex, ['uix-defaulf', 'uix-valid-c']);
-    // if(regex.test(field.value)) {
-    //   valid.style.background = '#5bff5e'
-    // }
-    // else {
-    //   valid.style.background = '#ffffff';
-    // }
+    // find way to get class type
   });
 }
 function setClasses(element, classIn) {
   element.className = 'uix-validation ' + classIn;
-  // element.classList.add(classIn);
 } 
 function setDefaultClass(element) {
   element.className = 'uix-validation uix-default';
   element.style.display = 'inherit';
-  // element.style.background = '#ffffff';
 }
 function switchClasses(field, valid, regex, classes = ['uix-invalid-c', 'uix-valid-c']) {
   if(regex.test(field.value)) {
@@ -67,20 +55,6 @@ function switchClasses(field, valid, regex, classes = ['uix-invalid-c', 'uix-val
 }
 // Can be usefull latter
 //var classList = this.className.split(' ');
-//  this.className = '';
-
-// function setClass(classOut, classIn) {
-//   var element = document.getElementById("test");
-//   element.addEventListener("click", () => {
-//      if(element.classList.contains("invalid")) {
-//        element.classList.remove("invalid");
-//        element.classList.add("valid");
-//      } else {
-//        element.classList.remove("valid");
-//        element.classList.add("invalid");
-//      }
-//   });
-// } 
 
 // Specific functions
 // Number
