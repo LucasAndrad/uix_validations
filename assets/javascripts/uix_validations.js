@@ -28,32 +28,42 @@ function validatePattern(fieldId, validId, regex) {
 }
 function checkInputOut(field, valid, regex) {
   field.addEventListener("focusout", () => {
-    if(regex.test(field.value)) {
-      valid.style.background = '#5bff5e'
-    }
-    else {
-      valid.style.background = '#ff8484';
-    }
+    switchClasses(field, valid, regex);
+    // if(regex.test(field.value)) {
+    //   valid.style.background = '#5bff5e'
+    // }
+    // else {
+    //   valid.style.background = '#ff8484';
+    // }
   });
 }
 function checkInputValue(field, valid, regex) {
   field.addEventListener("keyup", () => {
-    if(regex.test(field.value)) {
-      valid.style.background = '#5bff5e'
-    }
-    else {
-      valid.style.background = '#ffffff';
-    }
+    switchClasses(field, valid, regex, ['uix-defaulf', 'uix-valid-c']);
+    // if(regex.test(field.value)) {
+    //   valid.style.background = '#5bff5e'
+    // }
+    // else {
+    //   valid.style.background = '#ffffff';
+    // }
   });
 }
-function setClasses(element, classOut, classIn) {
-  element.classList.remove(classOut);
-  element.classList.add(classIn);
+function setClasses(element, classIn) {
+  element.className = 'uix-validation ' + classIn;
+  // element.classList.add(classIn);
 } 
 function setDefaultClass(element) {
-  element.className = 'uix-validation';
+  element.className = 'uix-validation uix-default';
   element.style.display = 'inherit';
-  element.style.background = '#ffffff';
+  // element.style.background = '#ffffff';
+}
+function switchClasses(field, valid, regex, classes = ['uix-invalid-c', 'uix-valid-c']) {
+  if(regex.test(field.value)) {
+    setClasses(valid, classes[1]);
+  }
+  else {
+    setClasses(valid, classes[0]);
+  }
 }
 // Can be usefull latter
 //var classList = this.className.split(' ');
