@@ -34,7 +34,7 @@ function checkInputOut(field, valid, regex) {
 }
 function checkInputValue(field, valid, regex) {
   field.addEventListener("keyup", () => {
-    switchClasses(field, valid, regex, ['uix-defaulf', 'uix-valid-c']);
+    switchClasses(field, valid, regex, ['uix-defaulf', 'uix-valid']);
     // find way to get class type
   });
 }
@@ -45,8 +45,8 @@ function setDefaultClass(element) {
   element.className = 'uix-validation uix-default';
   element.style.display = 'inherit';
 }
-function switchClasses(field, valid, regex, classes = ['uix-invalid-c', 'uix-valid-c']) {
-  if(regex.test(field.value)) {
+function switchClasses(field, valid, regex, classes = ['uix-invalid', 'uix-valid']) {
+  if(regex.test(field.value) && field.value != '') {
     setClasses(valid, classes[1]);
   }
   else {
