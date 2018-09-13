@@ -43,7 +43,7 @@ function setClasses(element, classIn) {
 } 
 function setDefaultClass(element) {
   element.className = 'uix-validation uix-default';
-  element.style.display = 'inherit';
+  element.style.visibility = 'inherit';
 }
 function switchClasses(field, valid, regex, classes = ['uix-invalid', 'uix-valid']) {
   if(regex.test(field.value) && field.value != '') {
