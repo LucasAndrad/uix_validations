@@ -7,7 +7,9 @@ var nonDigitPattern = /^[^0-9]*$/;
 var emailPattern = /\S+@\S+\.\S+/;
 
 // From https://stackoverflow.com/questions/14850553/javascript-regex-for-password-containing-at-least-8-characters-1-number-1-uppe
-var strongPasswordPattern = /^(?=.*\d)[0-9a-zA-Z]{8,}$/
+var strongPasswordPattern = /^(?=.*\d)[0-9a-zA-Z]{8,}$/;
+
+var veryStrongPasswordPattern = /^(?=.*[A-Z])(?=.*[!@#$&*.,_-])(?=.*[0-9])(?=.*[a-z]).{8,}$/
 
 // Flow
 // onClick -> set default
@@ -97,4 +99,8 @@ function validateRegex(fieldId, validId, regex) {
 // Strong Password
 function validateStrongPassword(fieldId, validId) {
   validatePattern(fieldId, validId, strongPasswordPattern);
+}
+// Very Strong Password
+function validateVeryStrongPassword(fieldId, validId) {
+  validatePattern(fieldId, validId, veryStrongPasswordPattern);
 }
