@@ -39,6 +39,49 @@ If you are using `application.css` insted of `application.scss`, you can import 
 ### Live demo
 Check out this live demo using Uix Validations: [uix_validations_demo link here](https://uix-validations-demo.herokuapp.com/)
 
+### Examples
+Real time validation for numbers:
+```html
+<!-- html -->
+<div class="input">
+  <%= f.label 'Validation Number' %><br>
+  <%= f.text_field :title, class: 'input-text', id: 'input-num' %>
+  <!-- Add this div under your input -->
+  <div class="uix-validation" id="vali1">
+    Should have only numbers
+  </div>
+</div>
+
+<script>
+  // pass your input Id and your div Id
+  validateNumber("#input-num", "#vali1");
+</script>
+```
+---
+Real time validation for characters
+```html
+<div class="input">
+  <%= f.label 'Validation Character' %><br>
+  <%= f.text_field :title, class: 'input-text', id: 'input-char' %>
+  <div class="uix-validation" id="vali2">
+    Should have only characters
+  </div>
+</div>
+
+<script>
+  validateCharacter("#input-char", "#vali2");
+</script>
+```
+---
+Real time validation for characters with length 5 - 10
+```html
+<script>
+  validateCharacterLength("#input-num", "#vali1", [5,10]);
+</script>
+```
+
+
+
 ## Good practices about real time validations
 This gem is inspired in [Luke Wroblewski study, (article here)](https://alistapart.com/article/inline-validation-in-web-forms) about validation in web forms. This article was published in 2009 but it's still a excellent reference about form validations. Many writers use Luke study as reference in other articles [Example here](https://designmodo.com/ux-form-validation/)
 
