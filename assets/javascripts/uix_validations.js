@@ -87,3 +87,7 @@ function validateJustRange(fieldId, validId, range=[0,10]) {
   var rangePattern = new RegExp(`^\\S{`+range[0]+`,`+range[1]+`}$`);
   validatePattern(fieldId, validId, rangePattern);
 }
+// Any regex
+function validateRegex(fieldId, validId, regex) {
+  validatePattern(fieldId, validId, regex);
+}
