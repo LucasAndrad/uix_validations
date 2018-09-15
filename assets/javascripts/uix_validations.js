@@ -71,7 +71,7 @@ function validateNumberRange(fieldId, validId, range=[0,10]) {
 function validateCharacter(fieldId, validId) {
   validatePattern(fieldId, validId, characterPattern);
 }
-function validateCharacterRange(fieldId, validId, range=[0,10]) {
+function validateCharacterLength(fieldId, validId, range=[0,10]) {
   var characterRangePattern = new RegExp(`^\[a-zA-Z]{`+range[0]+`,`+range[1]+`}$`);
   validatePattern(fieldId, validId, characterRangePattern);
 }
