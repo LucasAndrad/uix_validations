@@ -14,21 +14,18 @@ gem 'uix_validations'
 
 And then execute:
 
-    $ bundle install
+    bundle install
 
-Or install it yourself as:
 
-    $ gem install uix_validations
-
-Than in your Rails project add this at `app/assets/javascripts/application.js`
+Than in your Rails project add this line at `app/assets/javascripts/application.js`
 
 ```
 //= require uix_validations
 ```
 
-And this at `app/assets/stylesheets/application.scss`
+And this import at `app/assets/stylesheets/application.scss`
 
-```
+```scss
 @import "uix_validations";
 ```
 
@@ -96,6 +93,15 @@ Real time validation for characters with length 5 - 10
 | `validateStrongPassword(input_id, div_id)` | Validate if the password has: at least one digit, at least one character and at least 8 characters |
 | `validateVeryStrongPassword(input_id, div_id)` | Validate if the password has: at least one digit, at least one upcase character, at least one downcase character and at least 8 characters |
 
+### Customize
+You can customize the style of the div with the validation message<br>
+Here is the flow of the validation:<br>
+- When the page loads, the class of validation div is: `class="uix-validation"`
+- When the user is typing the class change to: `class="uix-validation uix-default"`
+- If the input.value is valid the div class change to: `class="uix-validation uix-valid"`
+- If the input.value is invalid, when user click out of the input the class change to: `class="uix-validation uix-invalid"`
+
+So if the `.uix-valid` and `.uix-invalid` styles are not exactly what you want, you can change the style as you want.
 
 ## Good practices about real time validations
 This gem is inspired in [Luke Wroblewski study, (article here)](https://alistapart.com/article/inline-validation-in-web-forms) about validation in web forms. This article was published in 2009 but it's still a excellent reference about form validations. Many writers use Luke study as reference in other articles [Example here](https://designmodo.com/ux-form-validation/)
