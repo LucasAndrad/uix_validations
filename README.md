@@ -80,6 +80,21 @@ Real time validation for characters with length 5 - 10
 </script>
 ```
 
+### Table with all functions
+
+| Js Function | What is it for? |
+|---|---|
+| `validateNumber(input_id, div_id)` | Valid if there are only numbers |
+| `validateNumberRange(input_id, div_id, [0, 2])`  | For now validates only the length of the number, example: [0,2] it's 00 to 99 |
+| `validateCharacter(input_id, div_id)` | Valid if there are only Characters |
+| `validateCharacterLength(input_id, div_id, [0, 2])` | Valid if there are only Characters with the correct length |
+| `validateNonDigit(input_id, div_id)` | Valid if there is anything except digits |
+| `validateNonDigitLength(input_id, div_id, [0, 2])` | Valid if there is anything except digits with the correct length |
+| `validateJustLength(input_id, div_id, [0,2])` | Valid if the value has the correct length |
+| `validateEmail(input_id, div_id)` | Checks for a valid email |
+| `validateRegex(input_id, div_id, custom_regex)` | Validate a custom regex |
+| `validateStrongPassword(input_id, div_id)` | Validate if the password has: at least one digit, at least one character and at least 8 characters |
+| `validateVeryStrongPassword(input_id, div_id)` | Validate if the password has: at least one digit, at least one upcase character, at least one downcase character and at least 8 characters |
 
 
 ## Good practices about real time validations

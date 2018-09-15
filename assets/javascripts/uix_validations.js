@@ -79,7 +79,7 @@ function validateCharacterLength(fieldId, validId, range=[0,10]) {
 function validateNonDigit(fieldId, validId) {
   validatePattern(fieldId, validId, nonDigitPattern);
 }
-function validateNonDigitRange(fieldId, validId, range=[0,10]) {
+function validateNonDigitLength(fieldId, validId, range=[0,10]) {
   var nonDigitRangePattern = new RegExp(`^\\D{`+range[0]+`,`+range[1]+`}$`);
   validatePattern(fieldId, validId, nonDigitRangePattern);
 }
@@ -88,7 +88,7 @@ function validateEmail(fieldId, validId) {
   validatePattern(fieldId, validId, emailPattern);
 }
 // Range
-function validateJustRange(fieldId, validId, range=[0,10]) {
+function validateJustLength(fieldId, validId, range=[0,10]) {
   var rangePattern = new RegExp(`^\\S{`+range[0]+`,`+range[1]+`}$`);
   validatePattern(fieldId, validId, rangePattern);
 }
