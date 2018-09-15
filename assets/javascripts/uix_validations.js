@@ -6,6 +6,9 @@ var nonDigitPattern = /^[^0-9]*$/;
 // From https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 var emailPattern = /\S+@\S+\.\S+/;
 
+// From https://stackoverflow.com/questions/14850553/javascript-regex-for-password-containing-at-least-8-characters-1-number-1-uppe
+var strongPasswordPattern = /^(?=.*\d)[0-9a-zA-Z]{8,}$/
+
 // Flow
 // onClick -> set default
 // checkinputValue-> 
@@ -90,4 +93,8 @@ function validateJustRange(fieldId, validId, range=[0,10]) {
 // Any regex
 function validateRegex(fieldId, validId, regex) {
   validatePattern(fieldId, validId, regex);
+}
+// Strong Password
+function validateStrongPassword(fieldId, validId) {
+  validatePattern(fieldId, validId, strongPasswordPattern);
 }
