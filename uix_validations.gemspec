@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{This gem provides real time validations for forms}
   spec.description   = %q{This gem provides real time validations for forms. All validations follow the best principles of UI and UX}
-  spec.homepage      = "https://github.com/LucasAndrad"
+  spec.homepage      = "https://github.com/LucasAndrad/uix_validations"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
